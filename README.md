@@ -1,2 +1,4 @@
 # ctf-tools
-Tools to Capture The Flag in golang
+This proyect is for practice to Go language and develop tools to facility Capture The Flag (CTF) security contest.
+
+
