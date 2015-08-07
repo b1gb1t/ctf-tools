@@ -37,10 +37,6 @@ func obtainInput(input *Input) {
 
 	flag.Parse()
 
-	fmt.Println("- Parametro file: ", *filename)
-	fmt.Println("- Parametro offset: ", *offset)
-	fmt.Println("- Parametro data: ", *data)
-
 	input.Filename = *filename
 	input.Offset = *offset
 	input.Data = *data
@@ -67,9 +63,6 @@ func addData(input Input) {
 	check(err)
 
 	file.Sync()
-
-	fmt.Printf("- Bytes writes: %d\n", writer)
-	//fmt.Println(hex.Dump(file))
 }
 
 //Check error.
