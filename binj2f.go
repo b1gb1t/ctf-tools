@@ -18,7 +18,7 @@ var (
 // Input represents the data structure received by user.
 type Input struct {
 	Filename string
-	Offset   string
+	Offset   int
 	Data     string
 }
 
@@ -26,13 +26,18 @@ type Input struct {
 func main() {
 	var input Input
 	obtainInput(&input)
-	addData(input)
+
+	if flag.Parsed() && len(os.Args) > 3 {
+		addData(input)
+	} else {
+		fmt.Printf("More information: %s -h or --help\n", os.Args[0])
+	}
 }
 
 //obtainInput takes user input data.
 func obtainInput(input *Input) {
 	filename := flag.String("file", "path/filename", "a string")
-	offset := flag.String("offset", "0", "an integer")
+	offset := flag.Int("offset", 0, "an integer")
 	data := flag.String("data", "\x00\x00", "a string in hex format")
 
 	flag.Parse()
