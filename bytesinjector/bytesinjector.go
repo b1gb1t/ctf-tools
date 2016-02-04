@@ -66,7 +66,7 @@ func addData(input Input) {
 	} else {
 		leftOffset := reader[:input.Offset]
 		rightOffset := reader[input.Offset:]
-		cleanData = [][]byte{leftOffset, []byte(decodeData), rightOffset}	
+		cleanData = [][]byte{leftOffset, []byte(decodeData), rightOffset}
 	}
 
 	dataFinal := bytes.Join(cleanData, []byte(""))
