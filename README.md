@@ -1,5 +1,5 @@
 # ctf-tools
-This proyect is for practice to Go language and develop tools to facility Capture The Flag (CTF) security contest.
+This project is to practice the GO language by developing tools that facilitate Capture The Flag (CTF).
 
 #### bytesinjector
 Inject some data to file. The data input are in hexadeciamal format \xXX
